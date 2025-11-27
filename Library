@@ -75,7 +75,7 @@ local DFAA = function()
 	makefolder('FinityGUI')
 	makefolder('FinityGUI/assets')
 	makefolder('FinityGUI/assets/custom') -- stores third part assets
-	writefile("FinityGUI/FinityDosAndDonts.txt", requestfunc(({ Url = "https://raw.githubusercontent.com/LocalSmail/Finity/main/things/DosAndDont", Method = "GET" })).Body)
+	writefile("FinityGUI/FinityDosAndDonts.txt", requestfunc(({ Url = "https://raw.githubusercontent.com/myethg/finity-fork/main/things/DosAndDont", Method = "GET" })).Body)
 
 	-- a template for the support that is to come
 
@@ -84,11 +84,11 @@ local DFAA = function()
 			print('CustomThemes file exists.')
 		end
 	elseif not isfile('FinityGUI/Customthemes.lua') then
-		writefile('FinityGUI/Customthemes.lua', requestfunc(({ Url = "https://raw.githubusercontent.com/LocalSmail/Finity/main/CustomThemeTemplate.lua", Method = "GET" })).Body)
+		writefile('FinityGUI/Customthemes.lua', requestfunc(({ Url = "https://raw.githubusercontent.com/myethg/finity-fork/main/CustomThemeTemplate.lua", Method = "GET" })).Body)
 	end
 
 	for i, v in Asset_Names do
-		writefile('FinityGUI/assets/'..v, requestfunc(({ Url = "https://raw.githubusercontent.com/LocalSmail/Finity/main/assets/"..v, Method = "GET" })).Body)
+		writefile('FinityGUI/assets/'..v, requestfunc(({ Url = "https://raw.githubusercontent.com/myethg/finity-fork/main/assets/"..v, Method = "GET" })).Body)
 	end
 
 end
@@ -247,7 +247,7 @@ end
 
 local Version = "1.0.2 (4)"
 
-local Discord = requestfunc({ Url = "https://raw.githubusercontent.com/LocalSmail/Finity/main/discord", Method = "GET"}).Body
+local Discord = requestfunc({ Url = "https://raw.githubusercontent.com/myethg/finity-fork/main/discord", Method = "GET"}).Body
 
 local HubMode = false
 local debug = false
